@@ -35,9 +35,8 @@ const ViewFormPage = async ({ params }: Props) => {
 
       <div className="grid gap-2 place-items-start">
         {allForms.map(({ data, uuid }) => (
-          <div>
+          <div key={uuid}>
             <Link
-              key={uuid}
               href={`/forms/${formId}/update?id=${uuid}`}
               className="text-lg font-medium underline text-blue-800"
             >
