@@ -1,0 +1,101 @@
+{
+  "data": [
+    {
+      "name": "id",
+      "label": "ID",
+      "type": "string",
+      "required": true,
+      "defaultValue": ""
+    },
+    {
+      "name": "name",
+      "label": "Name",
+      "type": "string",
+      "required": true,
+      "defaultValue": ""
+    },
+    {
+      "name": "email",
+      "label": "Email",
+      "type": "string",
+      "required": true,
+      "defaultValue": ""
+    },
+    {
+      "name": "gender",
+      "label": "Gender",
+      "type": "dropdown",
+      "options": [
+        {
+          "label": "Male",
+          "value": "male"
+        },
+        {
+          "label": "Female",
+          "value": "female"
+        }
+      ],
+      "required": true,
+      "defaultValue": ""
+    },
+    {
+      "name": "phone",
+      "label": "Phone",
+      "type": "string",
+      "required": true,
+      "defaultValue": ""
+    },
+    {
+      "name": "profile_image",
+      "label": "Profile image",
+      "type": "file",
+      "required": true,
+      "defaultValue": "",
+      "filePath": "/forms"
+    },
+    {
+      "name": "address_line_1",
+      "label": "Address line 1",
+      "type": "string",
+      "defaultValue": ""
+    },
+    {
+      "name": "address_line_2",
+      "label": "Address line 2",
+      "type": "string",
+      "defaultValue": ""
+    },
+    {
+      "name": "city",
+      "label": "City",
+      "type": "string",
+      "defaultValue": ""
+    },
+    {
+      "name": "state",
+      "label": "State",
+      "type": "string",
+      "defaultValue": ""
+    },
+    {
+      "name": "country",
+      "label": "Country",
+      "type": "string",
+      "defaultValue": ""
+    },
+    {
+      "name": "pincode",
+      "label": "Pincode",
+      "type": "string",
+      "defaultValue": ""
+    }
+  ],
+  "actions": [
+    {
+      "method": "POST",
+      "url": "/api/submit-form",
+      "variant": "success",
+      "name": "Submit"
+    }
+  ]
+}
