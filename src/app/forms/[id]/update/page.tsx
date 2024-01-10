@@ -18,6 +18,8 @@ const CreateAddedFormPage = async ({ params, searchParams }: Props) => {
   const formId = params.id;
   const entryId = searchParams.id;
 
+  if (!formId || !entryId) return <h1>Form ID or Entry ID undefined</h1>;
+
   let formDetails = await filterDocs("forms", where("uuid", "==", formId));
   let formDefaultValue = await filterDocs(
     "form-data",
@@ -25,9 +27,10 @@ const CreateAddedFormPage = async ({ params, searchParams }: Props) => {
   );
 
   formDetails = formDetails[0];
-  formDefaultValue = formDefaultValue[0];
-
   if (!formDetails) return <h1>Form Not Found</h1>;
+
+  formDefaultValue = formDefaultValue[0];
+  if (!formDefaultValue) return <h1>Form Default values not found</h1>;
 
   const docId = formDefaultValue.id;
 
