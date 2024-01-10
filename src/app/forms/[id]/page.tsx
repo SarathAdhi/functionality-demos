@@ -37,7 +37,7 @@ const ViewFormPage = async ({ params }: Props) => {
         {allForms.map(({ data, uuid }) => (
           <div key={uuid}>
             <Link
-              href={`/forms/${formId}/update?id=${uuid}`}
+              href={`/forms/${formId}/update?entryId=${uuid}`}
               className="text-lg font-medium underline text-blue-800"
             >
               UPDATE: {uuid}

@@ -10,13 +10,13 @@ type Props = {
     id: string;
   };
   searchParams: {
-    id: string;
+    entryId: string;
   };
 };
 
 const CreateAddedFormPage = async ({ params, searchParams }: Props) => {
   const formId = params.id;
-  const entryId = searchParams.id;
+  const entryId = searchParams.entryId;
 
   if (!formId || !entryId) return <h1>Form ID or Entry ID undefined</h1>;
 
